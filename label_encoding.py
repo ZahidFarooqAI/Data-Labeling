@@ -29,3 +29,19 @@ df_final = pd.concat([df, color_df], axis=1)
 
 print("\nEncoded Data:")
 print(df_final)
+#output
+#Original Data:
+   Name  Gender  Color
+0   Ali    Male    Red
+1  Sara  Female   Blue
+2  John    Male  Green
+3  Sara  Female    Red
+4   Ali    Male  Green
+
+#Encoded Data:
+   Name  Gender  Color  Gender_Label  Color_Blue  Color_Green  Color_Red
+0   Ali    Male    Red             1         0.0          0.0        1.0
+1  Sara  Female   Blue             0         1.0          0.0        0.0
+2  John    Male  Green             1         0.0          1.0        0.0
+3  Sara  Female    Red             0         0.0          0.0        1.0
+4   Ali    Male  Green             1         0.0          1.0
